@@ -1,6 +1,6 @@
 ### Welcome to my dbt test projects!
 
-- [master branch](https://github.com/victorcouste/dbt-tests/tree/master) is for local tests on PostgreSQL
+- default [master branch](https://github.com/victorcouste/dbt-tests/tree/master) is for local tests on PostgreSQL
 - [snowflake branch](https://github.com/victorcouste/dbt-tests/tree/snowflake) is for tests from dbt Cloud on Snowflake databases
 - [bigquery branch](https://github.com/victorcouste/dbt-tests/tree/bigquery) is for the [tutorial project](https://docs.getdbt.com/tutorial/setting-up) from dbt Cloud on BigQuery with the jaffle_shop customers model
 
