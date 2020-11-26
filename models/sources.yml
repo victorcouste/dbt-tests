@@ -2,11 +2,11 @@ version: 2
 
 sources:
   - name: jaffle_shop
-    description: This is a replica of the Postgres database used by our app
+    description: Tables used in dbt tutorials
     database: mydb
     schema: public
     tables:
-      
+
       - name: jaffle_shop_orders
         description: One record per order. Includes cancelled and deleted orders.
         columns:
@@ -19,7 +19,12 @@ sources:
             description: Note that the status can change over time
 
       - name: jaffle_shop_customers
+        description: One record per customer.
 
   - name: stripe
+    description: Payment table used in dbt tutorials
+    database: mydb
+    schema: public
     tables:
-      - name: payments
+      - name: stripe_payments
+        description: Payment table.
