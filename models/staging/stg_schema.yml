@@ -1,16 +1,10 @@
 version: 2
 
 models:
-  - name: customers
-    columns:
-      - name: customer_id
-        tests:
-          - unique
-          - not_null
 
-  - name: orders
+  - name: stg_payments
     columns:
-      - name: order_id
+      - name: payment_id
         tests:
           - unique
           - not_null

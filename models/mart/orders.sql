@@ -1,8 +1,8 @@
 with payments_orders as (
 
     select
-        orderid as order_id,
-        sum(amount) as order_amount
+        order_id,
+        sum(amount_usd) as order_amount_usd
     from {{ ref('stg_payments') }}
     group by 1
 ),
@@ -15,7 +15,7 @@ final as (
     	{{ ref('stg_orders') }}.customer_id,
     	{{ ref('stg_orders') }}.order_date,
     	{{ ref('stg_orders') }}.status,
-    	coalesce(payments_orders.order_amount, 0) as order_amount
+    	coalesce(payments_orders.order_amount_usd, 0) as order_amount_usd
 
     from {{ ref('stg_orders') }}
 
