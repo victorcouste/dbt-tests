@@ -10,7 +10,7 @@ models:
 
   - name: orders
     columns:
-      - name: id
+      - name: order_id
         tests:
           - unique
           - not_null
