@@ -7,7 +7,8 @@ sources:
     schema: public
     tables:
 
-      - name: jaffle_shop_orders
+      - name: shop_orders
+        identifier: jaffle_shop_orders
         description: One record per order. Includes cancelled and deleted orders.
         columns:
           - name: id
@@ -18,7 +19,8 @@ sources:
           - name: status
             description: Note that the status can change over time
 
-      - name: jaffle_shop_customers
+      - name: shop_customers
+        identifier: jaffle_shop_customers
         description: One record per customer.
 
   - name: stripe
@@ -26,5 +28,6 @@ sources:
     database: mydb
     schema: public
     tables:
-      - name: stripe_payments
+      - name: payments
+        identifier: stripe_payments
         description: Payment table.

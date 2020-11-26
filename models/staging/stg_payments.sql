@@ -5,4 +5,4 @@ select
     paymentmethod,
     created
 
-from {{ source('stripe', 'stripe_payments') }} where status='success'
+from {{ source('stripe', 'payments') }} where status='success'
